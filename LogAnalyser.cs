@@ -14,6 +14,7 @@ namespace LogAnalyzer
                 string[] logEntries = File.ReadAllLines(logFilePath);
                 int totalRoundsFinished = 0;
                 int totalButtonsPressed = 0;
+                int furthestRoundCompleted = 0;
 
                 foreach (string entry in logEntries)
                 {
@@ -29,12 +30,24 @@ namespace LogAnalyzer
                                 totalButtonsPressed += buttonsPressed;
                             }
                         }
+
+                        int roundIndex = entry.IndexOf("Round ") + "Round ".Length;
+                        int roundNumberLength = entry.IndexOf(" Finished") - roundIndex;
+                        string roundNumberStr = entry.Substring(roundIndex, roundNumberLength).Trim();
+                        if (int.TryParse(roundNumberStr, out int roundNumber))
+                        {
+                            if (roundNumber > furthestRoundCompleted)
+                            {
+                                furthestRoundCompleted = roundNumber;
+                            }
+                        }
                     }
                 }
 
                 Console.WriteLine("Log Summary:");
                 Console.WriteLine($"Total Rounds Finished: {totalRoundsFinished}");
                 Console.WriteLine($"Total Buttons Pressed: {totalButtonsPressed}");
+                Console.WriteLine($"Furthest Round Completed: {furthestRoundCompleted}");
             }
             else
             {
