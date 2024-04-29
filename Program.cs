@@ -14,6 +14,8 @@ namespace SimonGame
         private static int round = 1;
         private static bool gameOver = false;
         private static int buttonsPressed = 0;
+        private static int totalButtonsPressed = 0;
+
         private static DateTime gameStartTime;
         private static StreamWriter logWriter;
         private const string LogFilePath = "simon_game_log.txt";
@@ -37,15 +39,13 @@ namespace SimonGame
             gameOver = false;
             buttonsPressed = 0;
 
-            if (round == 1)
-            {
-                sequence = GenerateRandomSequence(5);
-            }
+            sequence = GenerateRandomSequence(round);
 
             Log($"Round {round} Started");
 
             DisplaySequence(round);
         }
+
 
         private static void DisplaySequence(int round)
         {
@@ -57,7 +57,7 @@ namespace SimonGame
             foreach (Color color in sequence)
             {
                 Console.WriteLine(color);
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 Console.Clear();
             }
 
@@ -82,6 +82,8 @@ namespace SimonGame
                         {
                             sequenceIndex++;
                             Console.WriteLine("Correct!");
+                            buttonsPressed++;
+                            totalButtonsPressed++;
 
                             if (sequenceIndex >= sequence.Length)
                             {
@@ -111,17 +113,17 @@ namespace SimonGame
             }
         }
 
-
-        private static Color[] GenerateRandomSequence(int length)
+        private static Color[] GenerateRandomSequence(int round)
         {
             Random random = new Random();
-            Color[] sequence = new Color[length];
-            for (int i = 0; i < length; i++)
+            Color[] sequence = new Color[round];
+            for (int i = 0; i < round; i++)
             {
                 sequence[i] = (Color)random.Next(4);
             }
             return sequence;
         }
+
 
         private static void Log(string message)
         {
@@ -136,7 +138,7 @@ namespace SimonGame
 
         private static void OutputSummary()
         {
-            Log($"Game Summary - Rounds Finished: {round - 1}, Buttons Pressed: {buttonsPressed}");
+            Log($"Game Summary - Rounds Finished: {round - 1}, Buttons Pressed: {totalButtonsPressed}");
         }
 
         private enum Color

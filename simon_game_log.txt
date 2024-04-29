@@ -22,3 +22,49 @@
 [0s] Round 1 Started
 [22s] Round 1 Finished. Buttons Pressed: 0
 [22s] Round 2 Started
+[63850021046s] Game Started
+[0s] Round 1 Started
+[23s] Game Over
+[23s] Game Summary - Rounds Finished: 0, Buttons Pressed: 4
+[63850021076s] Game Started
+[0s] Round 1 Started
+[26s] Game Over
+[26s] Game Summary - Rounds Finished: 0, Buttons Pressed: 4
+[63850021112s] Game Started
+[0s] Round 1 Started
+[23s] Round 1 Finished. Buttons Pressed: 5
+[23s] Round 2 Started
+[49s] Round 2 Finished. Buttons Pressed: 5
+[49s] Round 3 Started
+[63850022026s] Game Started
+[0s] Round 1 Started
+[63850022069s] Game Started
+[0s] Round 1 Started
+[8s] Round 1 Finished. Buttons Pressed: 1
+[8s] Round 2 Started
+[14s] Round 2 Finished. Buttons Pressed: 2
+[14s] Round 3 Started
+[21s] Game Over
+[21s] Game Summary - Rounds Finished: 2, Buttons Pressed: 1
+[33s] Round 3 Finished. Buttons Pressed: 3
+[33s] Round 4 Started
+[63850022612s] Game Started
+[0s] Round 1 Started
+[6s] Round 1 Finished. Buttons Pressed: 1
+[6s] Round 2 Started
+[18s] Round 2 Finished. Buttons Pressed: 2
+[18s] Round 3 Started
+[26s] Round 3 Finished. Buttons Pressed: 3
+[26s] Round 4 Started
+[63850022660s] Game Started
+[0s] Round 1 Started
+[4s] Round 1 Finished. Buttons Pressed: 1
+[4s] Round 2 Started
+[9s] Round 2 Finished. Buttons Pressed: 2
+[9s] Round 3 Started
+[19s] Round 3 Finished. Buttons Pressed: 3
+[19s] Round 4 Started
+[32s] Round 4 Finished. Buttons Pressed: 4
+[32s] Round 5 Started
+[40s] Game Over
+[40s] Game Summary - Rounds Finished: 4, Buttons Pressed: 10
