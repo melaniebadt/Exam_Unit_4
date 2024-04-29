@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using LogAnalyzer;
+
 
 namespace SimonGame
 {
@@ -20,18 +22,25 @@ namespace SimonGame
         private static StreamWriter logWriter;
         private const string LogFilePath = "simon_game_log.txt";
 
-        static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Simon Game!");
+            if (args.Length > 0 && args[0] == "-l")
+            {
+                LogAnalyzer.LogAnalyzer.GenerateSummary(new string[0]);
+            }
+            else
+            {
+                Console.WriteLine("Welcome to Simon Game!");
 
-            logWriter = new StreamWriter(LogFilePath, true);
+                logWriter = new StreamWriter(LogFilePath, true);
 
-            Log("Game Started");
-            gameStartTime = DateTime.UtcNow;
+                Log("Game Started");
+                gameStartTime = DateTime.UtcNow;
 
-            StartGame();
+                StartGame();
 
-            Console.ReadLine();
+                Console.ReadLine();
+            }
         }
 
         private static void StartGame()

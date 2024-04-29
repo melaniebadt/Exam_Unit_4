@@ -68,3 +68,7 @@
 [32s] Round 5 Started
 [40s] Game Over
 [40s] Game Summary - Rounds Finished: 4, Buttons Pressed: 10
+[63850023149s] Game Started
+[0s] Round 1 Started
+[63850024032s] Game Started
+[0s] Round 1 Started
